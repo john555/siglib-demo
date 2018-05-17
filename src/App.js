@@ -5,10 +5,15 @@ import Siglib from './lib/siglib';
 class App extends Component {
 
   startProcessing = () => {
+    if (SignaturePad.data.length === 0) {
+      this.canvas.width = 300;
+      this.canvas.height = 150;
+      return;
+    }
     const siglibData = Siglib(SignaturePad.data, 10);
     this.canvas.width = siglibData.width;
     this.canvas.height = siglibData.height;
-
+    
     siglibData.data.forEach(points => {
       this.drawPoints(points);
     });
