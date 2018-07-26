@@ -7,7 +7,7 @@ It takes an array of points (`[[{ x, y}, ...]...]`), applies a transform and com
 
 ## How to run demo.
 ```
-$ git clone ttps://github.com/john555/siglib-demo.git
+$ git clone https://github.com/john555/siglib-demo.git
 $ cd siglib-demo
 $ yarn install
 $ yarn start
